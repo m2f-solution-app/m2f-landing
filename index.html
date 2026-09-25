@@ -15,6 +15,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    /* Estilos personalizados para el slider de rango */
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #f97316;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.6);
+      border: 3px solid #090D14;
+    }
+    input[type=range]::-moz-range-thumb {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #f97316;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.6);
+      border: 3px solid #090D14;
+    }
   </style>
 </head>
 <body class="bg-[#090D14] text-slate-100 antialiased selection:bg-orange-500 selection:text-white relative">
@@ -167,111 +187,108 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE PRECIOS (ESTILO CLOFI) -->
+  <!-- SECCIÓN DE PRECIOS CON CALCULADORA (5, 15, 30, 50, 60... 100, +100) -->
   <section id="precios" class="py-24 px-6 border-t border-white/5 bg-[#080B11] relative">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-4xl mx-auto">
+      
       <div class="text-center mb-12">
-        <h2 class="text-xs font-extrabold uppercase tracking-widest text-orange-400 mb-3">Precios claros y simples</h2>
-        <p class="text-3xl sm:text-4xl font-black text-white">Elegí el plan que mejor se adapte a tu escala</p>
-        <p class="text-slate-400 text-sm mt-3">Sin contratos a largo plazo. Podés pausar o cambiar de plan cuando quieras.</p>
-        
-        <!-- Toggle Mensual / Anual -->
-        <div class="mt-8 inline-flex items-center bg-slate-900 border border-white/10 rounded-full p-1">
-          <button id="btn-mensual" onclick="setBilling('mensual')" class="px-5 py-2 rounded-full text-xs font-bold transition bg-orange-500 text-slate-950 shadow">
-            Mensual
-          </button>
-          <button id="btn-anual" onclick="setBilling('anual')" class="px-5 py-2 rounded-full text-xs font-bold transition text-slate-400 hover:text-white flex items-center gap-1.5">
-            Anual <span class="bg-orange-500/20 text-orange-400 text-[10px] px-2 py-0.5 rounded-full border border-orange-500/30">Ahorrás 20%</span>
-          </button>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase tracking-wider mb-4">
+          🔥 Promoción de Lanzamiento
         </div>
+        <h2 class="text-xs font-extrabold uppercase tracking-widest text-orange-400 mb-2">Precios claros y dinámicos</h2>
+        <p class="text-3xl sm:text-4xl font-black text-white">Pagás únicamente según la cantidad de alumnos</p>
+        <p class="text-slate-400 text-sm mt-3">Precios con bonificación especial del 50% aplicada por tiempo limitado:</p>
       </div>
 
-      <!-- Pricing Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <!-- CONTENEDOR DE LA CALCULADORA -->
+      <div class="p-8 md:p-12 rounded-3xl bg-[#0F1420] border-2 border-orange-500/40 shadow-2xl relative">
         
-        <!-- Plan Inicial -->
-        <div class="p-8 rounded-2xl bg-[#0F1420] border border-white/10 flex flex-col justify-between">
+        <!-- Indicador de Alumnos y Badge de Plan -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Inicial</div>
-            <h3 class="text-xl font-bold text-white mb-2">Entrenador Personal</h3>
-            <p class="text-slate-400 text-xs mb-6">Ideal para coaches independientes con una cartera activa de alumnos.</p>
-            
-            <div class="mb-6">
-              <span id="price-inicial" class="text-4xl font-black text-white">$14.900</span>
-              <span class="text-slate-400 text-xs"> /mes</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Escala seleccionada:</span>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span id="client-count-display" class="text-3xl sm:text-4xl font-black text-orange-400">5</span>
+              <span id="client-text-label" class="text-lg font-bold text-white">Alumnos</span>
             </div>
-
-            <ul class="space-y-3 text-xs text-slate-300">
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Hasta 25 alumnos activos</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Armado de rutinas ilimitadas</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Fichas de progreso individuales</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Acceso web desde celular y PC</li>
-            </ul>
           </div>
-
-          <a href="https://wa.me/5493417219828?text=Hola!%20Me%20interesa%20contratar%20el%20Plan%20Inicial%20de%20M2F" target="_blank" class="mt-8 w-full py-3.5 rounded-xl text-center text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white border border-white/10 transition flex items-center justify-center gap-2">
-            <i data-lucide="message-circle" class="w-4 h-4 text-orange-400"></i>
-            Comenzar con Plan Inicial
-          </a>
+          
+          <div id="plan-badge" class="px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-extrabold uppercase tracking-wider">
+            Plan Inicial
+          </div>
         </div>
 
-        <!-- Plan Pro (Destacado tipo Clofi) -->
-        <div class="p-8 rounded-2xl bg-[#121927] border-2 border-orange-500 relative shadow-2xl shadow-orange-500/10 flex flex-col justify-between scale-105">
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 text-[11px] font-black uppercase tracking-wider shadow">
-            Más Popular
+        <!-- Slider Range con valores fijos -->
+        <div class="mb-10">
+          <input 
+            type="range" 
+            id="clients-range" 
+            min="0" 
+            max="9" 
+            value="0" 
+            step="1"
+            class="w-full h-3 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-orange-500 focus:outline-none"
+            oninput="updatePricingByStep(this.value)"
+          />
+          <div class="flex justify-between text-[11px] font-bold text-slate-500 mt-3 px-1">
+            <span>5</span>
+            <span>15</span>
+            <span>30</span>
+            <span>50</span>
+            <span>70</span>
+            <span>100</span>
+            <span>+100 (Studio)</span>
           </div>
-          <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-orange-400 mb-2">Profesional</div>
-            <h3 class="text-xl font-bold text-white mb-2">Estudio / Gimnasio</h3>
-            <p class="text-slate-400 text-xs mb-6">Para centros de entrenamiento y entrenadores de alto rendimiento.</p>
-            
-            <div class="mb-6">
-              <span id="price-pro" class="text-4xl font-black text-white">$27.900</span>
-              <span class="text-slate-400 text-xs"> /mes</span>
-            </div>
-
-            <ul class="space-y-3 text-xs text-slate-200">
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Alumnos ilimitados</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Todo lo del plan Inicial</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Múltiples entrenadores / profesores</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Exportación de reportes de evolución</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Soporte prioritario por WhatsApp</li>
-            </ul>
-          </div>
-
-          <a href="https://wa.me/5493417219828?text=Hola!%20Quiero%20activar%20el%20Plan%20Pro%20de%20M2F%20Solutions" target="_blank" class="mt-8 w-full py-3.5 rounded-xl text-center text-xs font-extrabold bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 transition shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2">
-            <i data-lucide="message-circle" class="w-4 h-4 text-slate-950"></i>
-            Elegir Plan Pro →
-          </a>
         </div>
 
-        <!-- Plan Enterprise / A Medida -->
-        <div class="p-8 rounded-2xl bg-[#0F1420] border border-white/10 flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Personalizado</div>
-            <h3 class="text-xl font-bold text-white mb-2">Cadenas & Franquicias</h3>
-            <p class="text-slate-400 text-xs mb-6">Para gimnasios con múltiples sedes y necesidades de gestión avanzada.</p>
+        <!-- Tarjeta de Resultado Dinámico -->
+        <div class="p-6 md:p-8 rounded-2xl bg-[#141A28] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+          
+          <div class="text-center md:text-left flex-1">
+            <h3 id="plan-name" class="text-xl font-black text-white mb-2">Plan Inicial Entrenador</h3>
+            <p id="plan-desc" class="text-slate-400 text-xs mb-6">
+              Ideal para iniciar la gestión digital de tus primeros alumnos con fichas completas y rutinas.
+            </p>
             
-            <div class="mb-6">
-              <span class="text-4xl font-black text-white">A medida</span>
-              <span class="text-slate-400 text-xs"> /personalizado</span>
-            </div>
-
-            <ul class="space-y-3 text-xs text-slate-300">
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Sedes múltiples sincronizadas</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Integraciones personalizadas</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Onboarding y capacitación guiada</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Asesor dedicado M2F</li>
+            <ul id="plan-features" class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400 shrink-0"></i> Acceso total a la aplicación web</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400 shrink-0"></i> Armado y guardado de rutinas personalizadas</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400 shrink-0"></i> Fichas técnicas y seguimiento individual</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400 shrink-0"></i> Soporte y atención personalizada</li>
             </ul>
           </div>
 
-          <a href="https://wa.me/5493417219828?text=Hola!%20Quiero%20consultar%20por%20el%20plan%20a%20medida%20de%20M2F%20Solutions" target="_blank" class="mt-8 w-full py-3.5 rounded-xl text-center text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white border border-white/10 transition flex items-center justify-center gap-2">
-            <i data-lucide="message-circle" class="w-4 h-4 text-orange-400"></i>
-            Hablar con un asesor
-          </a>
+          <!-- Precios (Original tachado + Descuento 50% + Final) y CTA -->
+          <div class="flex flex-col items-center md:items-end justify-center min-w-[240px] text-center md:text-right border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-8">
+            <span class="text-xs uppercase font-bold text-slate-400 mb-1">Inversión mensual</span>
+            
+            <!-- Contenedor Precio Tachado y Badge Descuento -->
+            <div id="original-price-container" class="flex items-center gap-2 mb-1">
+              <span id="price-original" class="text-sm font-bold text-slate-500 line-through">$20.000</span>
+              <span id="discount-badge" class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-black tracking-wide border border-emerald-500/30">
+                50% OFF
+              </span>
+            </div>
+
+            <!-- Precio con descuento -->
+            <div id="price-container" class="flex items-baseline gap-1 mb-6">
+              <span id="price-number" class="text-4xl font-black text-white">$10.000</span>
+              <span id="price-period" class="text-slate-400 text-xs">/mes</span>
+            </div>
+
+            <a id="cta-pricing-btn" 
+               href="https://wa.me/5493417219828?text=Hola!%20Quiero%20activar%20el%20plan%20M2F%20para%205%20alumnos%20con%20el%2050%%20OFF" 
+               target="_blank" 
+               class="w-full py-4 px-6 rounded-xl text-center text-xs font-black bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 transition shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span id="cta-btn-text">Contratar con 50% OFF</span>
+            </a>
+          </div>
+
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -364,24 +381,70 @@
   <script>
     lucide.createIcons();
 
-    // Lógica para alternar entre mensual y anual en la tabla de precios
-    function setBilling(mode) {
-      const btnMensual = document.getElementById('btn-mensual');
-      const btnAnual = document.getElementById('btn-anual');
-      const priceInicial = document.getElementById('price-inicial');
-      const pricePro = document.getElementById('price-pro');
+    // ESCALA CON SALTOS: 5, 15, 30, 50, 60, 70, 80, 90, 100, +100
+    const tiers = [
+      { clients: 5,   price: 10000, name: "Plan Inicial Entrenador", badge: "Plan Inicial", desc: "Ideal para iniciar la gestión digital de tus primeros alumnos con fichas completas y rutinas." },
+      { clients: 15,  price: 18900, name: "Plan Crecimiento 15",     badge: "Plan Crecimiento", desc: "Perfecto para entrenadores activos que expanden su cartera de alumnos." },
+      { clients: 30,  price: 32500, name: "Plan Avanzado 30",        badge: "Plan Avanzado",    desc: "Capacidad ampliada para seguimiento intensivo de alumnos y evolución física." },
+      { clients: 50,  price: 50000, name: "Plan Profesional Pro",    badge: "Plan Pro",         desc: "Máxima capacidad para entrenadores consolidados y estudios en crecimiento activo." },
+      { clients: 60,  price: 60000, name: "Plan Estudio 60",         badge: "Plan Estudio",     desc: "Diseñado para boxes de entrenamiento y estudios con alto volumen de alumnos." },
+      { clients: 70,  price: 70000, name: "Plan Estudio 70",         badge: "Plan Estudio",     desc: "Control total de rutinas y alumnos para centros de entrenamiento en expansión." },
+      { clients: 80,  price: 80000, name: "Plan Estudio 80",         badge: "Plan Estudio",     desc: "Gestión centralizada para centros deportivos y entrenadores con equipo a cargo." },
+      { clients: 90,  price: 90000, name: "Plan Gimnasio 90",        badge: "Plan Gimnasio",    desc: "Plataforma de alto rendimiento para academias y gimnasios consolidados." },
+      { clients: 100, price: 100000, name: "Plan Gimnasio 100",      badge: "Plan Gimnasio",    desc: "El plan más completo para grandes gimnasios con seguimiento intensivo de 100 alumnos." },
+      { clients: "100+", price: null, name: "Plan Studio / Franquicias", badge: "Plan Studio",  desc: "Para gimnasios, estudios y centros de entrenamiento con gran volumen y múltiples sedes." }
+    ];
 
-      if (mode === 'anual') {
-        btnAnual.className = 'px-5 py-2 rounded-full text-xs font-bold transition bg-orange-500 text-slate-950 shadow flex items-center gap-1.5';
-        btnMensual.className = 'px-5 py-2 rounded-full text-xs font-bold transition text-slate-400 hover:text-white';
-        priceInicial.textContent = '$11.900';
-        pricePro.textContent = '$22.300';
-      } else {
-        btnMensual.className = 'px-5 py-2 rounded-full text-xs font-bold transition bg-orange-500 text-slate-950 shadow';
-        btnAnual.className = 'px-5 py-2 rounded-full text-xs font-bold transition text-slate-400 hover:text-white flex items-center gap-1.5';
-        priceInicial.textContent = '$14.900';
-        pricePro.textContent = '$27.900';
+    function updatePricingByStep(index) {
+      index = parseInt(index);
+      const tier = tiers[index];
+
+      const countDisplay = document.getElementById('client-count-display');
+      const textLabel = document.getElementById('client-text-label');
+      const planBadge = document.getElementById('plan-badge');
+      const planName = document.getElementById('plan-name');
+      const planDesc = document.getElementById('plan-desc');
+      const originalContainer = document.getElementById('original-price-container');
+      const priceOriginal = document.getElementById('price-original');
+      const priceNumber = document.getElementById('price-number');
+      const pricePeriod = document.getElementById('price-period');
+      const ctaBtn = document.getElementById('cta-pricing-btn');
+      const ctaBtnText = document.getElementById('cta-btn-text');
+
+      // CASO MÁS DE 100 (+100): STUDIO A CONSULTA
+      if (tier.clients === "100+") {
+        countDisplay.textContent = "+100";
+        textLabel.textContent = "Alumnos (Studio / Cadenas)";
+        planBadge.textContent = tier.badge;
+        planName.textContent = tier.name;
+        planDesc.textContent = tier.desc;
+        originalContainer.style.display = "none";
+        priceNumber.textContent = "A consultar";
+        pricePeriod.textContent = "";
+        ctaBtnText.textContent = "Consultar con un asesor";
+        ctaBtn.href = "https://wa.me/5493417219828?text=Hola!%20Quiero%20consultar%20por%20el%20Plan%20Studio%20para%20más%20de%20100%20alumnos%20en%20M2F%20Solutions";
+        return;
       }
+
+      // CASOS CON PRECIO CALCULADO Y 50% OFF
+      originalContainer.style.display = "flex";
+      countDisplay.textContent = tier.clients;
+      textLabel.textContent = "Alumnos";
+      planBadge.textContent = tier.badge;
+      planName.textContent = tier.name;
+      planDesc.textContent = tier.desc;
+      pricePeriod.textContent = "/mes";
+
+      const finalPrice = tier.price;
+      const originalPrice = finalPrice * 2; // Simulación del 50% OFF
+
+      const formattedFinal = "$" + finalPrice.toLocaleString('es-AR');
+      const formattedOriginal = "$" + originalPrice.toLocaleString('es-AR');
+
+      priceOriginal.textContent = formattedOriginal;
+      priceNumber.textContent = formattedFinal;
+      ctaBtnText.textContent = "Contratar por " + formattedFinal;
+      ctaBtn.href = `https://wa.me/5493417219828?text=Hola!%20Quiero%20aprovechar%20el%2050%%20OFF%20y%20activar%20el%20plan%20M2F%20Solutions%20para%20${tier.clients}%20alumnos%20(${formattedFinal}/mes)`;
     }
   </script>
 </body>
