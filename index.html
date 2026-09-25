@@ -187,7 +187,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE PRECIOS CON CALCULADORA (5, 15, 30, 50, 60... 100, +100) -->
+  <!-- SECCIÓN DE PRECIOS CON CALCULADORA (FORMATO 999) -->
   <section id="precios" class="py-24 px-6 border-t border-white/5 bg-[#080B11] relative">
     <div class="max-w-4xl mx-auto">
       
@@ -258,13 +258,13 @@
             </ul>
           </div>
 
-          <!-- Precios (Original tachado + Descuento 50% + Final) y CTA -->
+          <!-- Precios (Tachado 999 + Descuento 50% + Final 999) y CTA -->
           <div class="flex flex-col items-center md:items-end justify-center min-w-[240px] text-center md:text-right border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-8">
             <span class="text-xs uppercase font-bold text-slate-400 mb-1">Inversión mensual</span>
             
             <!-- Contenedor Precio Tachado y Badge Descuento -->
             <div id="original-price-container" class="flex items-center gap-2 mb-1">
-              <span id="price-original" class="text-sm font-bold text-slate-500 line-through">$20.000</span>
+              <span id="price-original" class="text-sm font-bold text-slate-500 line-through">$19.999</span>
               <span id="discount-badge" class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-black tracking-wide border border-emerald-500/30">
                 50% OFF
               </span>
@@ -272,16 +272,16 @@
 
             <!-- Precio con descuento -->
             <div id="price-container" class="flex items-baseline gap-1 mb-6">
-              <span id="price-number" class="text-4xl font-black text-white">$10.000</span>
+              <span id="price-number" class="text-4xl font-black text-white">$9.999</span>
               <span id="price-period" class="text-slate-400 text-xs">/mes</span>
             </div>
 
             <a id="cta-pricing-btn" 
-               href="https://wa.me/5493417219828?text=Hola!%20Quiero%20activar%20el%20plan%20M2F%20para%205%20alumnos%20con%20el%2050%%20OFF" 
+               href="https://wa.me/5493417219828?text=Hola!%20Quiero%20activar%20el%20plan%20M2F%20para%205%20alumnos%20por%20$9.999/mes%20con%20el%2050%%20OFF" 
                target="_blank" 
                class="w-full py-4 px-6 rounded-xl text-center text-xs font-black bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 transition shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2">
               <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span id="cta-btn-text">Contratar con 50% OFF</span>
+              <span id="cta-btn-text">Contratar por $9.999</span>
             </a>
           </div>
 
@@ -381,18 +381,18 @@
   <script>
     lucide.createIcons();
 
-    // ESCALA CON SALTOS: 5, 15, 30, 50, 60, 70, 80, 90, 100, +100
+    // ESCALA EN FORMATO PSICOLÓGICO (...999)
     const tiers = [
-      { clients: 5,   price: 10000, name: "Plan Inicial Entrenador", badge: "Plan Inicial", desc: "Ideal para iniciar la gestión digital de tus primeros alumnos con fichas completas y rutinas." },
-      { clients: 15,  price: 18900, name: "Plan Crecimiento 15",     badge: "Plan Crecimiento", desc: "Perfecto para entrenadores activos que expanden su cartera de alumnos." },
-      { clients: 30,  price: 32500, name: "Plan Avanzado 30",        badge: "Plan Avanzado",    desc: "Capacidad ampliada para seguimiento intensivo de alumnos y evolución física." },
-      { clients: 50,  price: 50000, name: "Plan Profesional Pro",    badge: "Plan Pro",         desc: "Máxima capacidad para entrenadores consolidados y estudios en crecimiento activo." },
-      { clients: 60,  price: 60000, name: "Plan Estudio 60",         badge: "Plan Estudio",     desc: "Diseñado para boxes de entrenamiento y estudios con alto volumen de alumnos." },
-      { clients: 70,  price: 70000, name: "Plan Estudio 70",         badge: "Plan Estudio",     desc: "Control total de rutinas y alumnos para centros de entrenamiento en expansión." },
-      { clients: 80,  price: 80000, name: "Plan Estudio 80",         badge: "Plan Estudio",     desc: "Gestión centralizada para centros deportivos y entrenadores con equipo a cargo." },
-      { clients: 90,  price: 90000, name: "Plan Gimnasio 90",        badge: "Plan Gimnasio",    desc: "Plataforma de alto rendimiento para academias y gimnasios consolidados." },
-      { clients: 100, price: 100000, name: "Plan Gimnasio 100",      badge: "Plan Gimnasio",    desc: "El plan más completo para grandes gimnasios con seguimiento intensivo de 100 alumnos." },
-      { clients: "100+", price: null, name: "Plan Studio / Franquicias", badge: "Plan Studio",  desc: "Para gimnasios, estudios y centros de entrenamiento con gran volumen y múltiples sedes." }
+      { clients: 5,   priceFinal: "$9.999",   priceOriginal: "$19.999",  name: "Plan Inicial Entrenador", badge: "Plan Inicial", desc: "Ideal para iniciar la gestión digital de tus primeros alumnos con fichas completas y rutinas." },
+      { clients: 15,  priceFinal: "$18.999",  priceOriginal: "$37.999",  name: "Plan Crecimiento 15",     badge: "Plan Crecimiento", desc: "Perfecto para entrenadores activos que expanden su cartera de alumnos." },
+      { clients: 30,  priceFinal: "$32.999",  priceOriginal: "$65.999",  name: "Plan Avanzado 30",        badge: "Plan Avanzado",    desc: "Capacidad ampliada para seguimiento intensivo de alumnos y evolución física." },
+      { clients: 50,  priceFinal: "$49.999",  priceOriginal: "$99.999",  name: "Plan Profesional Pro",    badge: "Plan Pro",         desc: "Máxima capacidad para entrenadores consolidados y estudios en crecimiento activo." },
+      { clients: 60,  priceFinal: "$59.999",  priceOriginal: "$119.999", name: "Plan Estudio 60",         badge: "Plan Estudio",     desc: "Diseñado para boxes de entrenamiento y estudios con alto volumen de alumnos." },
+      { clients: 70,  priceFinal: "$69.999",  priceOriginal: "$139.999", name: "Plan Estudio 70",         badge: "Plan Estudio",     desc: "Control total de rutinas y alumnos para centros de entrenamiento en expansión." },
+      { clients: 80,  priceFinal: "$79.999",  priceOriginal: "$159.999", name: "Plan Estudio 80",         badge: "Plan Estudio",     desc: "Gestión centralizada para centros deportivos y entrenadores con equipo a cargo." },
+      { clients: 90,  priceFinal: "$89.999",  priceOriginal: "$179.999", name: "Plan Gimnasio 90",        badge: "Plan Gimnasio",    desc: "Plataforma de alto rendimiento para academias y gimnasios consolidados." },
+      { clients: 100, priceFinal: "$99.999",  priceOriginal: "$199.999", name: "Plan Gimnasio 100",      badge: "Plan Gimnasio",    desc: "El plan más completo para grandes gimnasios con seguimiento intensivo de 100 alumnos." },
+      { clients: "100+", priceFinal: null, priceOriginal: null,          name: "Plan Studio / Franquicias", badge: "Plan Studio",  desc: "Para gimnasios, estudios y centros de entrenamiento con gran volumen y múltiples sedes." }
     ];
 
     function updatePricingByStep(index) {
@@ -426,7 +426,7 @@
         return;
       }
 
-      // CASOS CON PRECIO CALCULADO Y 50% OFF
+      // CASOS CON PRECIO 999 Y 50% OFF
       originalContainer.style.display = "flex";
       countDisplay.textContent = tier.clients;
       textLabel.textContent = "Alumnos";
@@ -435,16 +435,10 @@
       planDesc.textContent = tier.desc;
       pricePeriod.textContent = "/mes";
 
-      const finalPrice = tier.price;
-      const originalPrice = finalPrice * 2; // Simulación del 50% OFF
-
-      const formattedFinal = "$" + finalPrice.toLocaleString('es-AR');
-      const formattedOriginal = "$" + originalPrice.toLocaleString('es-AR');
-
-      priceOriginal.textContent = formattedOriginal;
-      priceNumber.textContent = formattedFinal;
-      ctaBtnText.textContent = "Contratar por " + formattedFinal;
-      ctaBtn.href = `https://wa.me/5493417219828?text=Hola!%20Quiero%20aprovechar%20el%2050%%20OFF%20y%20activar%20el%20plan%20M2F%20Solutions%20para%20${tier.clients}%20alumnos%20(${formattedFinal}/mes)`;
+      priceOriginal.textContent = tier.priceOriginal;
+      priceNumber.textContent = tier.priceFinal;
+      ctaBtnText.textContent = "Contratar por " + tier.priceFinal;
+      ctaBtn.href = `https://wa.me/5493417219828?text=Hola!%20Quiero%20aprovechar%20el%2050%%20OFF%20y%20activar%20el%20plan%20M2F%20Solutions%20para%20${tier.clients}%20alumnos%20(${tier.priceFinal}/mes)`;
     }
   </script>
 </body>
