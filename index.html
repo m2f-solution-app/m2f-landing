@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M2F Solutions | Plataforma de Gestión Fitness</title>
+  <title>M2F Solutions | Management to Fitness</title>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="icon-512.png" />
   <!-- Tailwind CSS por CDN -->
@@ -17,7 +17,15 @@
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
   </style>
 </head>
-<body class="bg-[#090D14] text-slate-100 antialiased selection:bg-orange-500 selection:text-white">
+<body class="bg-[#090D14] text-slate-100 antialiased selection:bg-orange-500 selection:text-white relative">
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/5493417219828?text=Hola!%20Quiero%20más%20información%20sobre%20M2F%20Solutions" 
+     target="_blank" 
+     class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition duration-300 flex items-center justify-center shadow-emerald-500/30"
+     title="Contactar por WhatsApp">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </a>
 
   <!-- NAVBAR -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#090D14]/85 backdrop-blur-md border-b border-white/5">
@@ -34,8 +42,9 @@
 
       <!-- Menu links -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-400">
+        <a href="#vision" class="hover:text-white transition">Concepto M2F</a>
         <a href="#funciones" class="hover:text-white transition">Funciones</a>
-        <a href="#beneficios" class="hover:text-white transition">Beneficios</a>
+        <a href="#precios" class="hover:text-white transition">Precios</a>
         <a href="#contacto" class="hover:text-white transition">Contacto</a>
       </nav>
 
@@ -43,7 +52,7 @@
       <div class="flex items-center gap-4">
         <a href="https://m2f-solution-app.github.io/m2f-solutions-app/" target="_blank" 
            class="px-5 py-2.5 rounded-full text-sm font-bold bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 transition shadow-lg shadow-orange-500/25 flex items-center gap-2">
-          <span>Ingresar a la App</span>
+          <span>Entrar a la App</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
@@ -51,8 +60,7 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="pt-36 pb-20 md:pt-44 md:pb-28 px-6 text-center relative overflow-hidden">
-    <!-- Glow radial naranja en el fondo -->
+  <section class="pt-36 pb-20 md:pt-44 md:pb-24 px-6 text-center relative overflow-hidden">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(249,115,22,0.18),rgba(255,255,255,0))]"></div>
     
     <div class="max-w-4xl mx-auto relative z-10">
@@ -72,7 +80,7 @@
       </h1>
 
       <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
-        La plataforma integral diseñada para entrenadores personales y gimnasios. Creá rutinas a medida, controlá evoluciones físicas y llevá tu negocio fitness al siguiente nivel.
+        La plataforma integral diseñada para entrenadores personales y gimnasios. Creá rutinas a medida, controlá evoluciones físicas y profesionalizá tu gestión fitness.
       </p>
 
       <!-- Botones de acción -->
@@ -82,9 +90,9 @@
           Abrir aplicación web
           <i data-lucide="external-link" class="w-5 h-5"></i>
         </a>
-        <a href="#funciones" 
+        <a href="#precios" 
            class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-semibold bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-white/10 transition">
-          Conocer funciones
+          Ver planes y precios
         </a>
       </div>
 
@@ -92,7 +100,7 @@
       <div class="relative max-w-md mx-auto group">
         <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-orange-500 to-amber-500 opacity-30 blur-2xl group-hover:opacity-50 transition duration-500"></div>
         <div class="relative rounded-2xl bg-[#0F1420] border border-white/10 p-6 shadow-2xl flex flex-col items-center">
-          <img src="icon-512.png" alt="M2F Solutions" class="w-44 h-44 rounded-2xl shadow-xl border border-white/5 object-cover mb-4" />
+          <img src="icon-512.png" alt="M2F Solutions" class="w-40 h-40 rounded-2xl shadow-xl border border-white/5 object-cover mb-4" />
           <div class="text-center">
             <p class="text-white font-bold text-lg">M2F Web App</p>
             <p class="text-slate-400 text-xs">Acceso directo desde cualquier navegador y dispositivo</p>
@@ -100,18 +108,24 @@
         </div>
       </div>
 
-      <!-- Badges de confianza -->
-      <div class="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-slate-400">
-        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Sin descargas pesadas</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Interfaz rápida y clara</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Diseñado para coach y alumnos</span>
-      </div>
+    </div>
+  </section>
 
+  <!-- SECCIÓN MANIFIESTO / FRASE DE CABECERA -->
+  <section id="vision" class="py-20 px-6 border-y border-white/5 bg-[#0C101A] relative">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-orange-500/10 text-orange-400 mb-6 border border-orange-500/20">
+        <i data-lucide="quote" class="w-6 h-6"></i>
+      </div>
+      <blockquote class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-snug tracking-tight mb-6">
+        “Así como el B2B conecta empresas, nuestro modelo <span class="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">M2F (Management to Fitness)</span> conecta la alta gestión con el mundo del bienestar.”
+      </blockquote>
+      <div class="h-1 w-20 bg-gradient-to-r from-orange-500 to-amber-400 mx-auto rounded-full"></div>
     </div>
   </section>
 
   <!-- BENTO GRID / FUNCIONES -->
-  <section id="funciones" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/5">
+  <section id="funciones" class="py-24 px-6 max-w-6xl mx-auto">
     <div class="text-center mb-16">
       <h2 class="text-xs font-extrabold uppercase tracking-widest text-orange-400 mb-3">Herramientas de entrenamiento</h2>
       <p class="text-3xl sm:text-4xl font-black text-white">Todo lo que necesitás para gestionar tu gimnasio</p>
@@ -125,7 +139,7 @@
         </div>
         <h3 class="text-xl font-bold text-white mb-2">Creación de Rutinas</h3>
         <p class="text-slate-400 text-sm leading-relaxed">
-          Diseñá entrenamientos estructurados por grupos musculares, días, cargas, series y descansos específicos.
+          Diseñá entrenamientos estructurados por grupos musculares, días, cargas, series y descansos específicos en pocos clics.
         </p>
       </div>
 
@@ -136,28 +150,183 @@
         </div>
         <h3 class="text-xl font-bold text-white mb-2">Fichas de Alumnos</h3>
         <p class="text-slate-400 text-sm leading-relaxed">
-          Organizá todos los perfiles de tus clientes: datos de contacto, historial de salud y metas deportivas al alcance de un clic.
+          Organizá los perfiles de tus clientes: datos de contacto, historial físico, objetivos y fichas técnicas centralizadas.
         </p>
       </div>
 
       <!-- Card 3 -->
       <div class="p-8 rounded-2xl bg-[#0F1420]/80 border border-white/5 hover:border-orange-500/40 transition group">
         <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition">
-          <i data-lucide="flame" class="w-6 h-6"></i>
+          <i data-lucide="trending-up" class="w-6 h-6"></i>
         </div>
-        <h3 class="text-xl font-bold text-white mb-2">Seguimiento y Progreso</h3>
+        <h3 class="text-xl font-bold text-white mb-2">Seguimiento y Métricas</h3>
         <p class="text-slate-400 text-sm leading-relaxed">
-          Visualizá los avances, registros de pesos máximos y adherencia al entrenamiento de manera profesional.
+          Visualizá los avances, registros de cargas máximas (PR) y la evolución física con reportes visuales y claros.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- SECCIÓN DE PRECIOS (ESTILO CLOFI) -->
+  <section id="precios" class="py-24 px-6 border-t border-white/5 bg-[#080B11] relative">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-xs font-extrabold uppercase tracking-widest text-orange-400 mb-3">Precios claros y simples</h2>
+        <p class="text-3xl sm:text-4xl font-black text-white">Elegí el plan que mejor se adapte a tu escala</p>
+        <p class="text-slate-400 text-sm mt-3">Sin contratos a largo plazo. Podés pausar o cambiar de plan cuando quieras.</p>
+        
+        <!-- Toggle Mensual / Anual -->
+        <div class="mt-8 inline-flex items-center bg-slate-900 border border-white/10 rounded-full p-1">
+          <button id="btn-mensual" onclick="setBilling('mensual')" class="px-5 py-2 rounded-full text-xs font-bold transition bg-orange-500 text-slate-950 shadow">
+            Mensual
+          </button>
+          <button id="btn-anual" onclick="setBilling('anual')" class="px-5 py-2 rounded-full text-xs font-bold transition text-slate-400 hover:text-white flex items-center gap-1.5">
+            Anual <span class="bg-orange-500/20 text-orange-400 text-[10px] px-2 py-0.5 rounded-full border border-orange-500/30">Ahorrás 20%</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Plan Inicial -->
+        <div class="p-8 rounded-2xl bg-[#0F1420] border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Inicial</div>
+            <h3 class="text-xl font-bold text-white mb-2">Entrenador Personal</h3>
+            <p class="text-slate-400 text-xs mb-6">Ideal para coaches independientes con una cartera activa de alumnos.</p>
+            
+            <div class="mb-6">
+              <span id="price-inicial" class="text-4xl font-black text-white">$14.900</span>
+              <span class="text-slate-400 text-xs"> /mes</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-300">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Hasta 25 alumnos activos</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Armado de rutinas ilimitadas</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Fichas de progreso individuales</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Acceso web desde celular y PC</li>
+            </ul>
+          </div>
+
+          <a href="https://wa.me/5493417219828?text=Hola!%20Me%20interesa%20contratar%20el%20Plan%20Inicial%20de%20M2F" target="_blank" class="mt-8 w-full py-3.5 rounded-xl text-center text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white border border-white/10 transition flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4 text-orange-400"></i>
+            Comenzar con Plan Inicial
+          </a>
+        </div>
+
+        <!-- Plan Pro (Destacado tipo Clofi) -->
+        <div class="p-8 rounded-2xl bg-[#121927] border-2 border-orange-500 relative shadow-2xl shadow-orange-500/10 flex flex-col justify-between scale-105">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 text-[11px] font-black uppercase tracking-wider shadow">
+            Más Popular
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-orange-400 mb-2">Profesional</div>
+            <h3 class="text-xl font-bold text-white mb-2">Estudio / Gimnasio</h3>
+            <p class="text-slate-400 text-xs mb-6">Para centros de entrenamiento y entrenadores de alto rendimiento.</p>
+            
+            <div class="mb-6">
+              <span id="price-pro" class="text-4xl font-black text-white">$27.900</span>
+              <span class="text-slate-400 text-xs"> /mes</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-200">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Alumnos ilimitados</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Todo lo del plan Inicial</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Múltiples entrenadores / profesores</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Exportación de reportes de evolución</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Soporte prioritario por WhatsApp</li>
+            </ul>
+          </div>
+
+          <a href="https://wa.me/5493417219828?text=Hola!%20Quiero%20activar%20el%20Plan%20Pro%20de%20M2F%20Solutions" target="_blank" class="mt-8 w-full py-3.5 rounded-xl text-center text-xs font-extrabold bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 transition shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4 text-slate-950"></i>
+            Elegir Plan Pro →
+          </a>
+        </div>
+
+        <!-- Plan Enterprise / A Medida -->
+        <div class="p-8 rounded-2xl bg-[#0F1420] border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Personalizado</div>
+            <h3 class="text-xl font-bold text-white mb-2">Cadenas & Franquicias</h3>
+            <p class="text-slate-400 text-xs mb-6">Para gimnasios con múltiples sedes y necesidades de gestión avanzada.</p>
+            
+            <div class="mb-6">
+              <span class="text-4xl font-black text-white">A medida</span>
+              <span class="text-slate-400 text-xs"> /personalizado</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-300">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Sedes múltiples sincronizadas</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Integraciones personalizadas</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Onboarding y capacitación guiada</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-orange-400"></i> Asesor dedicado M2F</li>
+            </ul>
+          </div>
+
+          <a href="https://wa.me/5493417219828?text=Hola!%20Quiero%20consultar%20por%20el%20plan%20a%20medida%20de%20M2F%20Solutions" target="_blank" class="mt-8 w-full py-3.5 rounded-xl text-center text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white border border-white/10 transition flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4 text-orange-400"></i>
+            Hablar con un asesor
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CONTACTO DIRECTO -->
+  <section id="contacto" class="py-24 px-6 border-t border-white/5 relative">
+    <div class="max-w-4xl mx-auto text-center mb-12">
+      <h2 class="text-xs font-extrabold uppercase tracking-widest text-orange-400 mb-3">Contacto directo</h2>
+      <p class="text-3xl sm:text-4xl font-black text-white mb-4">¿Tenés dudas o querés una demo personalizada?</p>
+      <p class="text-slate-400 text-sm max-w-xl mx-auto">
+        Escribinos directamente y coordinamos una reunión para mostrarte cómo M2F se adapta a tu flujo de entrenamiento.
+      </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- WhatsApp Card -->
+      <a href="https://wa.me/5493417219828?text=Hola!%20Quiero%20más%20información%20sobre%20M2F%20Solutions" 
+         target="_blank"
+         class="p-6 rounded-2xl bg-[#0F1420] border border-white/5 hover:border-emerald-500/40 transition group flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition">
+          <i data-lucide="phone-call" class="w-6 h-6"></i>
+        </div>
+        <div class="text-left">
+          <p class="text-xs text-slate-400 font-semibold">WhatsApp Directo</p>
+          <p class="text-base font-bold text-white group-hover:text-emerald-400 transition">+54 9 341 721-9828</p>
+          <span class="text-[11px] text-emerald-400">Atención inmediata →</span>
+        </div>
+      </a>
+
+      <!-- Email Card -->
+      <a href="mailto:martinkohanoff28@gmail.com?subject=Consulta%20M2F%20Solutions" 
+         class="p-6 rounded-2xl bg-[#0F1420] border border-white/5 hover:border-orange-500/40 transition group flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400 group-hover:scale-110 transition">
+          <i data-lucide="mail" class="w-6 h-6"></i>
+        </div>
+        <div class="text-left overflow-hidden">
+          <p class="text-xs text-slate-400 font-semibold">Correo Electrónico</p>
+          <p class="text-sm font-bold text-white truncate group-hover:text-orange-400 transition">martinkohanoff28@gmail.com</p>
+          <span class="text-[11px] text-orange-400">Enviar correo →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Instagram Placeholder -->
+    <div class="mt-8 text-center">
+      <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-500">
+        <i data-lucide="instagram" class="w-4 h-4"></i> Instagram: Próximamente @m2fsolutions
+      </span>
+    </div>
+  </section>
+
   <!-- CTA FINAL -->
-  <section id="contacto" class="py-24 px-6 text-center border-t border-white/5 relative">
+  <section class="py-20 px-6 text-center border-t border-white/5 bg-[#0C101A]">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">
-        Empezá a transformar tus entrenamientos
+        Conectá tu entrenamiento con la alta gestión
       </h2>
       <p class="text-slate-400 mb-8 text-base">
         Ingresá ahora mismo y probá la plataforma de M2F Solutions online.
@@ -171,16 +340,49 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-10 px-6 border-t border-white/5 text-center text-xs text-slate-500 flex flex-col items-center gap-4">
+  <footer class="py-12 px-6 border-t border-white/5 text-center text-xs text-slate-500 flex flex-col items-center gap-6">
     <div class="flex items-center gap-2 font-bold text-slate-400">
-      <img src="icon-512.png" alt="M2F" class="w-5 h-5 rounded-md" />
+      <img src="icon-512.png" alt="M2F" class="w-6 h-6 rounded-md" />
       <span>M2F SOLUTIONS</span>
     </div>
+
+    <div class="flex flex-wrap justify-center gap-6 text-slate-400 font-semibold text-xs">
+      <a href="https://wa.me/5493417219828" target="_blank" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+        <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i> WhatsApp
+      </a>
+      <a href="mailto:martinkohanoff28@gmail.com" class="hover:text-orange-400 transition flex items-center gap-1.5">
+        <i data-lucide="mail" class="w-3.5 h-3.5 text-orange-400"></i> martinkohanoff28@gmail.com
+      </a>
+      <a href="https://m2f-solution-app.github.io/m2f-solutions-app/" target="_blank" class="hover:text-white transition">
+        Acceso a la App
+      </a>
+    </div>
+
     <p>© 2026 M2F Solutions. Todos los derechos reservados.</p>
   </footer>
 
   <script>
     lucide.createIcons();
+
+    // Lógica para alternar entre mensual y anual en la tabla de precios
+    function setBilling(mode) {
+      const btnMensual = document.getElementById('btn-mensual');
+      const btnAnual = document.getElementById('btn-anual');
+      const priceInicial = document.getElementById('price-inicial');
+      const pricePro = document.getElementById('price-pro');
+
+      if (mode === 'anual') {
+        btnAnual.className = 'px-5 py-2 rounded-full text-xs font-bold transition bg-orange-500 text-slate-950 shadow flex items-center gap-1.5';
+        btnMensual.className = 'px-5 py-2 rounded-full text-xs font-bold transition text-slate-400 hover:text-white';
+        priceInicial.textContent = '$11.900';
+        pricePro.textContent = '$22.300';
+      } else {
+        btnMensual.className = 'px-5 py-2 rounded-full text-xs font-bold transition bg-orange-500 text-slate-950 shadow';
+        btnAnual.className = 'px-5 py-2 rounded-full text-xs font-bold transition text-slate-400 hover:text-white flex items-center gap-1.5';
+        priceInicial.textContent = '$14.900';
+        pricePro.textContent = '$27.900';
+      }
+    }
   </script>
 </body>
 </html>
