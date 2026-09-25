@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M2F Solutions | Tu plataforma de gestión fitness</title>
+  <!-- Tailwind CSS por CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Iconos Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-[#0B0F17] text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0B0F17]/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="p-2 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-slate-950 font-black text-xl leading-none">M2F</span>
+        <span class="text-xl font-bold tracking-tight text-white">M2F Solutions</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+        <a href="#funciones" class="hover:text-white transition">Funciones</a>
+        <a href="#ventajas" class="hover:text-white transition">Ventajas</a>
+        <a href="#contacto" class="hover:text-white transition">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="https://m2f-solution-app.github.io/m2f-solutions-app/" target="_blank" 
+           class="px-5 py-2.5 rounded-full text-sm font-semibold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition shadow-lg shadow-emerald-500/20">
+          Entrar a la App →
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="pt-36 pb-20 md:pt-44 md:pb-28 px-6 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.15),rgba(255,255,255,0))]"></div>
+    
+    <div class="max-w-4xl mx-auto relative z-10">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-emerald-400 mb-8">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Plataforma para Entrenadores y Gimnasios
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+        Dejá las planillas de papel. <br />
+        <span class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
+          Gestioná tus alumnos y rutinas al 100%.
+        </span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Todo en una sola aplicación web moderna: armado de rutinas personalizadas, control de asistencia y seguimiento de progreso.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://m2f-solution-app.github.io/m2f-solutions-app/" target="_blank" 
+           class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-semibold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2">
+          Probar app ahora
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="#funciones" 
+           class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition">
+          Ver funciones
+        </a>
+      </div>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Acceso web inmediato</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Sin instalaciones pesadas</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Interfaz simple e intuitiva</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENTO GRID / FUNCIONES -->
+  <section id="funciones" class="py-20 px-6 max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-sm font-bold uppercase tracking-wider text-emerald-400 mb-3">Funcionalidades</h2>
+      <p class="text-3xl font-extrabold text-white">Todo lo que necesitás en un solo lugar</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6">
+          <i data-lucide="dumbbell" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Creación de Rutinas</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Diseñá planes de entrenamiento por días, series, repeticiones y cargas de forma rápida.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6">
+          <i data-lucide="users" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Gestión de Alumnos</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Mantené las fichas personales, datos de contacto y estado de tus clientes organizados.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6">
+          <i data-lucide="trending-up" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Seguimiento de Progreso</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Evaluá la evolución física y el cumplimiento de las metas de cada persona.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contacto" class="py-20 px-6 text-center border-t border-slate-900">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">
+        Empezá a digitalizar tus entrenamientos
+      </h2>
+      <p class="text-slate-400 mb-8 text-base">
+        Ingresá directamente a la aplicación web y probala gratis.
+      </p>
+      <a href="https://m2f-solution-app.github.io/m2f-solutions-app/" target="_blank"
+         class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition shadow-xl shadow-emerald-500/20">
+        Abrir M2F Solutions App
+        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 border-t border-slate-900 text-center text-xs text-slate-500">
+    <p>© 2026 M2F Solutions. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
