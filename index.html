@@ -51,8 +51,8 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#090D14]/85 backdrop-blur-md border-b border-white/5">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
+      <!-- Brand Logo (lleva a la app) -->
+      <a href="https://m2f-solution-app.github.io/m2f-solutions-app/" target="_blank" class="flex items-center gap-3 group">
         <img src="icon-512.png" alt="M2F Logo" class="w-10 h-10 rounded-xl object-cover border border-white/10 group-hover:scale-105 transition" />
         <div class="flex items-center text-xl font-extrabold tracking-tight">
           <span>M</span><span class="text-orange-500">2</span><span>F</span>
@@ -62,9 +62,8 @@
 
       <!-- Menu links -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-400">
-        <a href="#vision" class="hover:text-white transition">Concepto M2F</a>
-        <a href="#funciones" class="hover:text-white transition">Funciones</a>
         <a href="#experiencia" class="hover:text-white transition">Prueba 14 Días</a>
+        <a href="#funciones" class="hover:text-white transition">Funciones</a>
         <a href="#precios" class="hover:text-white transition">Precios</a>
         <a href="#contacto" class="hover:text-white transition">Contacto</a>
       </nav>
@@ -80,7 +79,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (OPCIÓN 2: DOBLE IMPACTO) -->
+  <!-- HERO SECTION -->
   <section class="pt-36 pb-20 md:pt-44 md:pb-24 px-6 text-center relative overflow-hidden">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,rgba(249,115,22,0.18),rgba(255,255,255,0))]"></div>
     
@@ -92,7 +91,7 @@
         14 Días de Prueba Libre + Asesor por WhatsApp
       </div>
 
-      <!-- Título principal Opción 2 -->
+      <!-- Título principal -->
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-tight mb-6">
         El doble impacto para tu negocio fitness: <br />
         <span class="bg-gradient-to-r from-orange-400 via-amber-400 to-orange-500 bg-clip-text text-transparent">
@@ -118,42 +117,42 @@
       </div>
 
       <!-- Mini badges de tranquilidad -->
-      <div class="flex flex-wrap items-center justify-center gap-5 text-xs text-slate-400 mb-16">
+      <div class="flex flex-wrap items-center justify-center gap-5 text-xs text-slate-400 mb-14">
         <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Sin tarjeta de crédito requerida</span>
         <span class="flex items-center gap-1.5"><i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i> Acceso 100% ilimitado por 14 días</span>
         <span class="flex items-center gap-1.5"><i data-lucide="message-circle" class="w-4 h-4 text-orange-400"></i> Asesor directo por WhatsApp</span>
       </div>
 
-      <!-- Mockup / Tarjeta del Icono central -->
-      <div class="relative max-w-md mx-auto group">
-        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-orange-500 to-amber-500 opacity-30 blur-2xl group-hover:opacity-50 transition duration-500"></div>
-        <div class="relative rounded-2xl bg-[#0F1420] border border-white/10 p-6 shadow-2xl flex flex-col items-center">
-          <img src="icon-512.png" alt="M2F Solutions" class="w-40 h-40 rounded-2xl shadow-xl border border-white/5 object-cover mb-4" />
+      <!-- FRASE DE CABECERA (B2B / M2F) ARRIBA DEL LOGO -->
+      <div class="max-w-3xl mx-auto mb-8 p-6 rounded-2xl bg-[#0F1420]/60 border border-white/5 backdrop-blur-sm">
+        <div class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-orange-500/10 text-orange-400 mb-3 border border-orange-500/20">
+          <i data-lucide="quote" class="w-4 h-4"></i>
+        </div>
+        <p class="text-lg sm:text-xl md:text-2xl font-extrabold text-white leading-snug tracking-tight">
+          “Así como el B2B conecta empresas, nuestro modelo <span class="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">M2F (Management to Fitness)</span> conecta la alta gestión con el mundo del bienestar.”
+        </p>
+      </div>
+
+      <!-- Mockup / Tarjeta del Icono central (HACÉ CLIC Y TE LLEVA A LA APP) -->
+      <a href="https://m2f-solution-app.github.io/m2f-solutions-app/" target="_blank" class="block relative max-w-md mx-auto group cursor-pointer" title="Hacé clic para entrar a la Web App">
+        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-orange-500 to-amber-500 opacity-30 blur-2xl group-hover:opacity-60 transition duration-500"></div>
+        <div class="relative rounded-2xl bg-[#0F1420] border border-white/10 group-hover:border-orange-500/50 p-6 shadow-2xl flex flex-col items-center transition duration-300 transform group-hover:-translate-y-1">
+          <img src="icon-512.png" alt="M2F Solutions" class="w-40 h-40 rounded-2xl shadow-xl border border-white/5 object-cover mb-4 group-hover:scale-105 transition duration-300" />
           <div class="text-center">
-            <p class="text-white font-bold text-lg">M2F Web App</p>
+            <p class="text-white font-bold text-lg flex items-center justify-center gap-1.5 group-hover:text-orange-400 transition">
+              <span>M2F Web App</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-orange-400"></i>
+            </p>
             <p class="text-slate-400 text-xs">Acceso directo desde cualquier navegador y dispositivo</p>
           </div>
         </div>
-      </div>
+      </a>
 
-    </div>
-  </section>
-
-  <!-- SECCIÓN MANIFIESTO / FRASE DE CABECERA -->
-  <section id="vision" class="py-20 px-6 border-y border-white/5 bg-[#0C101A] relative">
-    <div class="max-w-4xl mx-auto text-center relative z-10">
-      <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-orange-500/10 text-orange-400 mb-6 border border-orange-500/20">
-        <i data-lucide="quote" class="w-6 h-6"></i>
-      </div>
-      <blockquote class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-snug tracking-tight mb-6">
-        “Así como el B2B conecta empresas, nuestro modelo <span class="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">M2F (Management to Fitness)</span> conecta la alta gestión con el mundo del bienestar.”
-      </blockquote>
-      <div class="h-1 w-20 bg-gradient-to-r from-orange-500 to-amber-400 mx-auto rounded-full"></div>
     </div>
   </section>
 
   <!-- SECCIÓN: EXPERIENCIA 14 DÍAS + ONBOARDING + ASESOR POR WHATSAPP -->
-  <section id="experiencia" class="py-24 px-6 max-w-6xl mx-auto relative">
+  <section id="experiencia" class="py-24 px-6 max-w-6xl mx-auto relative border-t border-white/5">
     <div class="text-center mb-16">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">
         ✨ Compromiso de Acompañamiento
@@ -200,7 +199,7 @@
         </div>
       </div>
 
-      <!-- Paso 3 -->
+      <!-- Paso 3: Asesor por WhatsApp -->
       <div class="p-8 rounded-2xl bg-[#0F1420] border border-white/10 relative overflow-hidden flex flex-col justify-between group hover:border-orange-500/40 transition">
         <div class="text-5xl font-black text-slate-800/80 mb-4 group-hover:text-orange-500/20 transition">03</div>
         <div>
