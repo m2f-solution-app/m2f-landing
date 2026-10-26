@@ -552,9 +552,9 @@ function stepperHtml(){
 function resRows(){
   if(NR.step<=1)return '';
   const ic=NR.paraK==='alumno'?'👤':NR.paraK==='tipo'?'🏷️':NR.paraK==='equipo'?'⚽':'🧩';
-  if(NR.step===4)return `<div class="res"><span class="p">${ic} ${esc(NR.para)}</span><span class="p">${NR.modo==='rot'?'🔁 Rotativa':'📅 Fecha fija'}</span><span class="p">📝 ${esc(NR.nombre)}</span><button class="ch" data-go="1">Cambiar</button></div>`;
+  if(NR.step===4)return `<div class="res"><span class="p">${ic} ${esc(NR.para)}</span><span class="p">${NR.modo==='rot'?'🔁 Mensual':'📅 Fecha fija'}</span><span class="p">📝 ${esc(NR.nombre)}</span><button class="ch" data-go="1">Cambiar</button></div>`;
   let h=`<div class="res">1 · Para quién <span class="p">${ic} ${esc(NR.para)}</span><button class="ch" data-go="1">Cambiar</button></div>`;
-  if(NR.step>2)h+=`<div class="res">2 · Cómo se repite <span class="p">${NR.modo==='rot'?'🔁 Rotativa':'📅 Fecha fija'}</span><button class="ch" data-go="2">Cambiar</button></div>`;
+  if(NR.step>2)h+=`<div class="res">2 · Cómo se repite <span class="p">${NR.modo==='rot'?'🔁 Mensual':'📅 Fecha fija'}</span><button class="ch" data-go="2">Cambiar</button></div>`;
   return h;
 }
 function nrRender(){
@@ -574,7 +574,7 @@ function nrRender(){
   if(NR.step===2){
     h+=`<div class="card"><h2>2 · ¿Cómo se repite?</h2><div class="nr-opts">
       <button class="nr-opt ${NR.modo==='ff'?'on':''}" data-m="ff"><div class="ic">📅</div><div class="t">Fecha fija</div><div class="d">Cada día va con su fecha del calendario. Ej: la semana del 12 al 18.</div></button>
-      <button class="nr-opt ${NR.modo==='rot'?'on':''}" data-m="rot"><div class="ic">🔁</div><div class="t">Rotativa</div><div class="d">Los días se repiten solos (A → B → C → A), sin fechas. Permite progresión semanal.</div></button></div></div>`;
+      <button class="nr-opt ${NR.modo==='rot'?'on':''}" data-m="rot"><div class="ic">🔁</div><div class="t">Mensual</div><div class="d">Los días se repiten solos (A → B → C → A), sin fechas. Permite progresión semanal.</div></button></div></div>`;
   }
   if(NR.step===3){
     const sug=aluNombre()?`Fuerza - ${primerNombre()}`:'';
@@ -687,7 +687,7 @@ function bindAdd(){
 function sbarUpdate(){
   const inf=[];
   if(NR.para)inf.push((NR.paraK==='alumno'?'👤 ':'')+NR.para);
-  if(NR.modo)inf.push(NR.modo==='rot'?'🔁 Rotativa':'📅 Fecha fija');
+  if(NR.modo)inf.push(NR.modo==='rot'?'🔁 Mensual':'📅 Fecha fija');
   inf.push(`${NR.dias.length} día${NR.dias.length===1?'':'s'} · ${totEx()} ejercicio${totEx()===1?'':'s'}`);
   $('sInfo').innerHTML=inf.map(t=>`<span>${esc(t)}</span>`).join('');
   $('bBack').disabled=NR.step<=1;
@@ -870,7 +870,7 @@ document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{
 
 /* ====== CTA ====== */
 function rutinaTexto(){
-  return `${NR.nombre} (${NR.para}, ${NR.modo==='rot'?'rotativa':'fecha fija'}):\n`+NR.dias.map((d,i)=>`${d.nombre||('Día '+(i+1))}:\n`+d.ex.map(r=>{const e=BYID[r.id];return `• ${e.n} (${e.q}) ${r.s}x${r.r}${e.time?'s':''}${r.p?' · '+r.p+'kg':''}`}).join('\n')).join('\n');
+  return `${NR.nombre} (${NR.para}, ${NR.modo==='rot'?'mensual':'fecha fija'}):\n`+NR.dias.map((d,i)=>`${d.nombre||('Día '+(i+1))}:\n`+d.ex.map(r=>{const e=BYID[r.id];return `• ${e.n} (${e.q}) ${r.s}x${r.r}${e.time?'s':''}${r.p?' · '+r.p+'kg':''}`}).join('\n')).join('\n');
 }
 function renderCta(){
   $('sum').innerHTML=`<b>${esc(NR.nombre)}</b> · ${esc(NR.para)}<br>`+NR.dias.map((d,i)=>`<b>${esc(d.nombre||('Día '+(i+1)))}</b>: `+d.ex.map(r=>BYID[r.id].n).join(', ')).join('<br>');
